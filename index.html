@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Build on What’s Working – Webinar Series</title>
+
+<style>
+  /* ------------------------------
+     Base Styles (Mobile First)
+  ------------------------------ */
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #fafafa;
+  }
+
+  header {
+    background: #1e88e5;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  /* Mobile nav */
+  nav {
+    background: #1565c0;
+    color: white;
+  }
+
+  nav button {
+    width: 100%;
+    background: #0d47a1;
+    color: white;
+    padding: 1rem;
+    border: none;
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    background: #1565c0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    background: #0d47a1;
+  }
+
+  /* Content */
+  .container {
+    padding: 1rem;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    color: #1e88e5;
+  }
+
+  .session-list {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .session-list li {
+    background: white;
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  /* ------------------------------
+     Tablet (≥ 600px)
+  ------------------------------ */
+  @media (min-width: 600px) {
+    nav button {
+      display: none;
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav ul li a {
+      padding: 1rem;
+      border-right: 1px solid rgba(255,255,255,0.2);
+    }
+
+    nav ul li:last-child a {
+      border-right: none;
+    }
+  }
+
+  /* ------------------------------
+     Laptop (≥ 900px)
+  ------------------------------ */
+  @media (min-width: 900px) {
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+  /* ------------------------------
+     Desktop (≥ 1200px)
+  ------------------------------ */
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px;
+    }
+  }
+</style>
+
+<script>
+  // Mobile nav toggle
+  function toggleNav() {
+    const menu = document.getElementById('nav-menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+</head>
+
+<body>
+
+<header>
+  <h1>Build on What’s Working</h1>
+  <p>Program Calendars for Strong Scouting Units – Summer 2026</p>
+  <p>Kettle Country District, Bay-Lakes Council</p>
+</header>
+
+<nav>
+  <button onclick="toggleNav()">Menu</button>
+  <ul id="nav-menu">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#recordings">Recordings</a></li>
+    <li><a href="#upcoming">Upcoming Sessions</a></li>
+    <li><a href="#join">Join Live</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>Every other Tuesday evening this summer, we’re presenting a thirty-minute interactive webinar to help Kettle Country unit leaders build a strong program communicated through the unit calendar.</p>
+
+    <p>Summers are busy. If you can’t participate live, recordings and materials are available below.</p>
+
+    <p>Each session focuses on one practical idea you can apply immediately. Join when you can—every session is recorded.</p>
+  </section>
+
+  <section id="join">
+    <h2>Join Live on Zoom</h2>
+    <p><a href="https://us02web.zoom.us/j/85727620081?pwd=JI4hIZHE9xA9P4l0il2k4F8D4ThhWs.1" target="_blank">
+      Zoom Link for Live Sessions
+    </a></p>
+  </section>
+
+  <section id="recordings">
+    <h2>Recordings & Materials</h2>
+    <ul class="session-list">
+      <li>
+        <strong>Session 1:</strong> “A Calendar Is a Promise”  
+        <br>Tuesday, 6/23/26, 7 PM CDT  
+        <br><a href="#">Recording & Materials</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="upcoming">
+    <h2>Upcoming Sessions</h2>
+    <ul class="session-list">
+      <li><strong>Session 2:</strong> “Let the Calendar Build Itself” — Tue 7/7/26</li>
+      <li><strong>Session 3:</strong> “Predictability Builds Trust” — Tue 7/21/26</li>
+      <li><strong>Session 4:</strong> “Random Events to Real Program” — Tue 8/4/26</li>
+      <li><strong>Session 5:</strong> “Stop Doing It All Yourself” — Tue 8/18/26</li>
+      <li><strong>Session 6:</strong> “New Families Decide Fast” — Tue 9/8/26</li>
+      <li><strong>Session 7:</strong> “Don’t Lose It Once It Starts” — Tue 9/22/26</li>
+      <li><strong>Session 8:</strong> “What Strong Units Do Differently” — Tue 10/6/26</li>
+      <li><strong>Session 9:</strong> “Build Next Year Before It Starts” — Tue 10/20/26</li>
+    </ul>
+  </section>
+
+</main>
+
+</body>
+</html>
